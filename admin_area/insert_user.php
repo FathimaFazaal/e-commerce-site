@@ -128,17 +128,17 @@ if (!isset($_SESSION['admin_email'])) {
                         </div><!-- form-group Ends -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <!-- <div class="form-group">
 
                             <label class="col-md-3 control-label">About: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6">
 
                                 <textarea name="admin_about" class="form-control" rows="3"> </textarea>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div>
 
-                        </div><!-- form-group Ends -->
+                        </div> -->
 
                         <div class="form-group"><!-- form-group Starts -->
 
@@ -193,7 +193,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         $admin_contact = $_POST['admin_contact'];
 
-        $admin_about = $_POST['admin_about'];
+        // $admin_about = $_POST['admin_about'];
 
 
         $admin_image = $_FILES['admin_image']['name'];
