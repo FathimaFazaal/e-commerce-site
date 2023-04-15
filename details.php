@@ -345,9 +345,9 @@ if ($check_product == 0) {
 
 <p class='price'>
 
-Product Price : <del> $$pro_price </del><br>
+Product Price : <del> Rs $pro_price </del><br>
 
-Product sale Price : $$pro_psp_price
+Product sale Price : Rs $pro_psp_price
 
 </p>
 
@@ -358,7 +358,7 @@ Product sale Price : $$pro_psp_price
 
 <p class='price'>
 
-Product Price : $$pro_price
+Product Price : Rs $pro_price
 
 </p>
 
@@ -621,14 +621,14 @@ Bundle Price : Rs. $pro_price/-
 
               if ($pro_label == "Sale" or $pro_label == "Gift") {
 
-                $product_price = "<del> $$pro_price </del>";
+                $product_price = "<del> Rs $pro_price </del>";
 
-                $product_psp_price = "| $$pro_psp_price";
+                $product_psp_price = "| Rs $pro_psp_price";
               } else {
 
                 $product_psp_price = "";
 
-                $product_price = "$$pro_price";
+                $product_price = "Rs $pro_price";
               }
 
 
@@ -754,14 +754,14 @@ $product_label
 
                 if ($pro_label == "Sale" or $pro_label == "Gift") {
 
-                  $product_price = "<del> $$pro_price </del>";
+                  $product_price = "<del> Rs $pro_price </del>";
 
-                  $product_psp_price = "| $$pro_psp_price";
+                  $product_psp_price = "| Rs $pro_psp_price";
                 } else {
 
                   $product_psp_price = "";
 
-                  $product_price = "$$pro_price";
+                  $product_price = "Rs $pro_price";
                 }
 
 

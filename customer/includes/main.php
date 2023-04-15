@@ -61,7 +61,12 @@
 
         <div class="logo">
           <a class="logo__link" href="../index.php">
-            <img class="logo__img" src="images/logo.png" alt="Avenue fashion logotype" width="237" height="19">
+            <h2>
+              <strong>
+                <p class="text-center">Everest Marketing PVT LTD</p>
+              </strong>
+            </h2>
+            <img class="logo__img" src="../images/logoo.jpg" alt="Avenue fashion logotype" width="237" height="19">
           </a>
         </div>
 
