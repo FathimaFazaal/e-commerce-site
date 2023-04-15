@@ -451,6 +451,16 @@ if (!isset($_SESSION['admin_email'])) {
 
                 </li>
 
+                <li><!-- Report li Starts -->
+
+                    <a href="index.php?report">
+
+                        <i class="fa fa-fw fa-edit"></i> Reports
+
+                    </a>
+
+                </li><!-- Report li Ends -->
+
                 <li><!-- li Starts -->
 
                     <a href="#" data-toggle="collapse" data-target="#users">

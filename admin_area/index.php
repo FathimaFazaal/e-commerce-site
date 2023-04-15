@@ -439,6 +439,11 @@ if (!isset($_SESSION['admin_email'])) {
                     }
 
 
+                    if (isset($_GET['report'])) {
+
+                        include("report.php");
+                    }
+
                     if (isset($_GET['insert_store'])) {
 
                         include("insert_store.php");
