@@ -451,7 +451,10 @@ if (!isset($_SESSION['admin_email'])) {
 
                 </li>
 
-                <li><!-- Report li Starts -->
+                <!-- Report li Starts -->
+
+                <!-- <li>
+                    
 
                     <a href="index.php?report">
 
@@ -459,7 +462,46 @@ if (!isset($_SESSION['admin_email'])) {
 
                     </a>
 
-                </li><!-- Report li Ends -->
+                </li> -->
+                
+                
+                <li><!-- li Starts -->
+
+                    <a href="#" data-toggle="collapse" data-target="#reports">
+
+                        <i class="fa fa-fw fa-file"></i> Reports
+
+                        <i class="fa fa-fw fa-caret-down"></i>
+
+                    </a>
+
+                    <ul id="reports" class="collapse">
+
+                        <li>
+                            <a href="index.php?sales_report"> Sales </a>
+                        </li>
+
+                        <li>
+                            <a href="index.php?view_users"> Orders </a>
+                        </li>
+                        
+                        <li>
+                            <a href="index.php?products_report"> Products </a>
+                        </li>
+                        
+                        <li>
+                            <a href="index.php?best_customers"> Best Customers </a>
+                        </li>
+                        
+                        <li>
+                            <a href="index.php?view_users"> Sales with filter </a>
+                        </li>
+                    </ul>
+
+                </li><!-- li Ends -->
+                
+                
+                <!-- Report li Ends -->
 
                 <li><!-- li Starts -->
 

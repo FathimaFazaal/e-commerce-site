@@ -458,10 +458,25 @@ if (!isset($_SESSION['admin_email'])) {
 
                         include("delete_store.php");
                     }
-
+                    
                     if (isset($_GET['edit_store'])) {
 
                         include("edit_store.php");
+                    }
+
+                    if (isset($_GET['sales_report'])) {
+
+                        include("report_tables/view_sales_table.php");
+                    }
+
+                    if (isset($_GET['products_report'])) {
+
+                        include("report_tables/view_product_table.php");
+                    }
+
+                    if (isset($_GET['best_customers'])) {
+
+                        include("report_tables/view_best_customers.php");
                     }
 
                     ?>
