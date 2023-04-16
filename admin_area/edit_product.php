@@ -172,7 +172,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                   <p style="font-size:15px; font-weight:bold;">
 
-                    Product Url Example : navy-blue-t-shirt
+                    Product Url Example : Steel-Whisk
 
                   </p>
 
@@ -182,7 +182,7 @@ if (!isset($_SESSION['admin_email'])) {
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Select A Manufacturer </label>
+                <label class="col-md-3 control-label"> Select a Brand </label>
 
                 <div class="col-md-6">
 
@@ -221,7 +221,7 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Product Category </label>
+                <label class="col-md-3 control-label"> Category </label>
 
                 <div class="col-md-6">
 
@@ -257,7 +257,7 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Category </label>
+                <label class="col-md-3 control-label"> Sub Category </label>
 
                 <div class="col-md-6">
 
@@ -341,9 +341,9 @@ $manufacturer_title
 
               </div><!-- form-group Ends -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <!-- <div class="form-group"> form-group Starts -->
 
-                <label class="col-md-3 control-label"> Product Sale Price </label>
+              <!-- <label class="col-md-3 control-label"> Product Sale Price </label>
 
                 <div class="col-md-6">
 
@@ -351,7 +351,7 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div>form-group Ends -->
 
               <div class="form-group"><!-- form-group Starts -->
 

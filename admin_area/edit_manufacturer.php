@@ -43,7 +43,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / Edit Manufacturer
+                    <i class="fa fa-dashboard"></i> Dashboard / Edit Brand
 
                 </li>
 
@@ -64,7 +64,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title"><!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"> </i> Edit Manufacturer
+                        <i class="fa fa-money fa-fw"> </i> Edit Brand
 
                     </h3><!-- panel-title Ends -->
 
@@ -76,7 +76,8 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label"> Manufacturer Name </label>
+                            <label class="col-md-3 control-label"> Brand
+                                Title </label>
 
                             <div class="col-md-6">
 
@@ -88,7 +89,8 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label"> Show as Top Manufacturers </label>
+                            <label class="col-md-3 control-label"> Show as Top Brand
+                            </label>
 
                             <div class="col-md-6">
 
@@ -133,7 +135,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6">
 
-                                <input type="submit" name="update" class="form-control btn btn-primary" value=" Update Manufacturer ">
+                                <input type="submit" name="update" class="form-control btn btn-primary" value=" Update Brand ">
 
                             </div>
 
