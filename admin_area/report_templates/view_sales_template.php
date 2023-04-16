@@ -29,7 +29,7 @@ tr:nth-child(even) {
 
 $html .= '<img src="C:/xampp/htdocs/e-commerce-site/admin_area/admin_images/logo.jpg" style="width: 10%"/><span style="margin-top: -50px">Everest Marketing PVT LTD</span>';
 
-$html .= "<h3 style='text-align:center; background-color:#f2f2f2'>Sales Report</h3>";
+$html .= "<h3 style='text-align:center; background-color:#f2f2f2'>Sales Order Report</h3>";
 
 $html .= "<table style='width:100%'>
 <tr>

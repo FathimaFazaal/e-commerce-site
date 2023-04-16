@@ -73,7 +73,7 @@ else {
 <?php
 
 
-$get_customers = "SELECT customers.customer_name as name,customers.customer_email as email, COUNT(customer_orders.order_id) as orders FROM customer_orders,customers WHERE customer_orders.customer_id = customers.customer_id ORDER BY orders DESC";
+$get_customers = "SELECT customers.customer_name as name,customers.customer_email as email, COUNT(customer_orders.customer_id) as orders FROM customer_orders,customers WHERE customer_orders.customer_id = customers.customer_id GROUP BY customer_orders.customer_id ORDER BY orders DESC";
 
 $run_customers = mysqli_query($con,$get_customers);
 

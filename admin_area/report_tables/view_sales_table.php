@@ -20,7 +20,7 @@ else {
 
 <li class="active">
 
-<i class="fa fa-dashboard"></i> Dashboard / View Sales
+<i class="fa fa-dashboard"></i> Dashboard / View Sales Order
 
 </li>
 
@@ -44,7 +44,7 @@ else {
 
 <h3 class="panel-title">
 
-<i class="fa fa-money fa-fw"></i> View Sales
+<i class="fa fa-money fa-fw"></i> View Sales Order
 
 </h3>
 

@@ -478,11 +478,7 @@ if (!isset($_SESSION['admin_email'])) {
                     <ul id="reports" class="collapse">
 
                         <li>
-                            <a href="index.php?sales_report"> Sales </a>
-                        </li>
-
-                        <li>
-                            <a href="index.php?view_users"> Orders </a>
+                            <a href="index.php?sales_report"> Sales Order </a>
                         </li>
                         
                         <li>
