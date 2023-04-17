@@ -425,12 +425,21 @@ if (!isset($_SESSION['admin_email'])) {
                             <thead><!-- thead Starts -->
 
                                 <tr>
+<<<<<<< HEAD
                                     <th>Order Id</th>
                                     <th>Customer Email</th>
                                     <th>Invoice No</th>
                                     <th>Product ID</th>
                                     <th>Quantity</th>
                                     <!-- <th>Size</th> -->
+=======
+                                    <th>Order #</th>
+                                    <th>Customer</th>
+                                    <th>Invoice No</th>
+                                    <th>Product ID</th>
+                                    <th>Qty</th>
+                                    <th>Size</th>
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
                                     <th>Status</th>
 
 
@@ -487,7 +496,11 @@ if (!isset($_SESSION['admin_email'])) {
                                         <td><?php echo $invoice_no; ?></td>
                                         <td><?php echo $product_id; ?></td>
                                         <td><?php echo $qty; ?></td>
+<<<<<<< HEAD
                                         <!-- <td< ?></td> -->
+=======
+                                        <td><?php echo $size; ?></td>
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
                                         <td>
                                             <?php
                                             if ($order_status == 'pending') {

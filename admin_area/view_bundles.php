@@ -94,6 +94,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $pro_date = $row_pro['date'];
 
+<<<<<<< HEAD
                                     $pro_stock = $row_pro['stock'];
 
                                     $i++;
@@ -149,6 +150,50 @@ if (!isset($_SESSION['admin_email'])) {
                                             <a href="index.php?edit_bundle=<?php echo $pro_id; ?>">
 
                                                 <i class="fa fa-pencil"> </i> Edit
+=======
+                                    $i++;
+
+                                ?>
+
+                                    <tr>
+
+                                        <td><?php echo $i; ?></td>
+
+                                        <td><?php echo $pro_title; ?></td>
+
+                                        <td><img src="product_images/<?php echo $pro_image; ?>" width="60" height="60"></td>
+
+                                        <td>Rs <?php echo $pro_price; ?></td>
+
+                                        <td>
+                                            <?php
+
+                                            $get_sold = "select * from pending_orders where product_id='$pro_id'";
+                                            $run_sold = mysqli_query($con, $get_sold);
+                                            $count = mysqli_num_rows($run_sold);
+                                            echo $count;
+                                            ?>
+                                        </td>
+
+                                        <td> <?php echo $pro_keywords; ?> </td>
+
+                                        <td><?php echo $pro_date; ?></td>
+
+                                        <td>
+
+                                            <a href="index.php?delete_bundle=<?php echo $pro_id; ?>">
+
+                                                <i class="fa fa-trash-o"> </i> Delete
+
+                                            </a>
+
+                                        </td>
+
+                                        <td>
+
+                                            <a href="index.php?edit_bundle=<?php echo $pro_id; ?>">
+
+                                                <i class="fa fa-pencil"> </i> Edit
 
                                             </a>
 
@@ -156,6 +201,20 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     </tr>
 
+                                <?php } ?>
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
+
+                                            </a>
+
+<<<<<<< HEAD
+                                        </td>
+=======
+                            </tbody>
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
+
+                                    </tr>
+
+<<<<<<< HEAD
                                 <?php } ?>
 
 
@@ -172,6 +231,18 @@ if (!isset($_SESSION['admin_email'])) {
 
         </div><!-- col-lg-12 Ends -->
 
+=======
+                        </table><!-- table table-bordered table-hover table-striped Ends -->
+
+                    </div><!-- table-responsive Ends -->
+
+                </div><!-- panel-body Ends -->
+
+            </div><!-- panel panel-default Ends -->
+
+        </div><!-- col-lg-12 Ends -->
+
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
     </div><!-- 2 row Ends -->
 
 

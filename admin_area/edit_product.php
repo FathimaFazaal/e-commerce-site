@@ -354,6 +354,7 @@ $manufacturer_title
                 </div>
 
               </div>form-group Ends -->
+<<<<<<< HEAD
 
               <div class="form-group"><!-- form-group Starts -->
 
@@ -366,6 +367,8 @@ $manufacturer_title
                 </div>
 
               </div><!-- form-group Ends -->
+=======
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
 
 
               <div class="form-group"><!-- form-group Starts -->

@@ -250,9 +250,13 @@ $manufacturer_title
 
               </div><!-- form-group Ends -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <!-- <div class="form-group">form-group Starts -->
 
+<<<<<<< HEAD
               <label class="col-md-3 control-label"> Product Sale Price </label>
+=======
+              <!-- <label class="col-md-3 control-label"> Product Sale Price </label>
+>>>>>>> f1ebe6a24822b8fc538de7809883d1d5ede12a07
 
                 <div class="col-md-6">
 
@@ -260,7 +264,7 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div>form-group Ends -->
 
               <div class="form-group"><!-- form-group Starts -->
 
