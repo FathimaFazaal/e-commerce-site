@@ -90,7 +90,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                   <p style="font-size:15px; font-weight:bold;">
 
-                    Product Url Example : navy-blue-t-shirt
+                    Product Url Example : Steel-Whisk
 
                   </p>
 
@@ -101,13 +101,13 @@ if (!isset($_SESSION['admin_email'])) {
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Select A Manufacturer </label>
+                <label class="col-md-3 control-label"> Select a Brand</label>
 
                 <div class="col-md-6">
 
                   <select class="form-control" name="manufacturer"><!-- select manufacturer Starts -->
 
-                    <option> Select A Manufacturer </option>
+                    <option> Select a Brand </option>
 
                     <?php
 
@@ -133,13 +133,13 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Product Category </label>
+                <label class="col-md-3 control-label"> Category </label>
 
                 <div class="col-md-6">
 
                   <select name="product_cat" class="form-control">
 
-                    <option> Select a Product Category </option>
+                    <option> Select a Category </option>
 
 
                     <?php
@@ -169,14 +169,14 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Category </label>
+                <label class="col-md-3 control-label"> Sub Category </label>
 
                 <div class="col-md-6">
 
 
                   <select name="cat" class="form-control">
 
-                    <option> Select a Category </option>
+                    <option> Select a Sub Category </option>
 
                     <?php
 
@@ -252,11 +252,23 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Product Sale Price </label>
+              <label class="col-md-3 control-label"> Product Sale Price </label>
 
                 <div class="col-md-6">
 
                   <input type="text" name="psp_price" class="form-control" required>
+
+                </div>
+
+              </div><!-- form-group Ends -->
+
+              <div class="form-group"><!-- form-group Starts -->
+
+                <label class="col-md-3 control-label"> Product Quantity </label>
+
+                <div class="col-md-6">
+
+                  <input type="number" name="product_quantity" class="form-control" required>
 
                 </div>
 
@@ -407,6 +419,8 @@ $manufacturer_title
 
     $product_features = $_POST['product_features'];
 
+    $product_quantity = $_POST['product_quantity'];
+
     $product_video = $_POST['product_video'];
 
     $status = "product";
@@ -423,7 +437,7 @@ $manufacturer_title
     move_uploaded_file($temp_name2, "product_images/$product_img2");
     move_uploaded_file($temp_name3, "product_images/$product_img3");
 
-    $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_url,product_img1,product_img2,product_img3,product_price,product_psp_price,product_desc,product_features,product_video,product_keywords,product_label,status) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_url','$product_img1','$product_img2','$product_img3','$product_price','$psp_price','$product_desc','$product_features','$product_video','$product_keywords','$product_label','$status')";
+    $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_url,product_img1,product_img2,product_img3,product_price,product_psp_price,product_desc,product_features,product_video,product_keywords,product_label,status,stock) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_url','$product_img1','$product_img2','$product_img3','$product_price','$psp_price','$product_desc','$product_features','$product_video','$product_keywords','$product_label','$status','$product_quantity')";
 
     $run_product = mysqli_query($con, $insert_product);
 

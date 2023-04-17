@@ -92,6 +92,7 @@ $p_cat_title = $row_products['p_cat_title'];
 
 $product_price = $row_products['product_price'];
 
+$product_stock = $row_products['stock'];
 ?>
 
 <tr>
@@ -100,8 +101,8 @@ $product_price = $row_products['product_price'];
 <td><?php echo $product_title; ?></td>
 <td><img src="product_images/<?php echo $product_img1; ?>" width="60" height="60"></td>
 <td><?php echo $p_cat_title; ?></td>
-<td>$ <?php echo $product_price; ?></td>
-<td><?php echo rand (10,100) ?></td>
+<td>Rs <?php echo $product_price; ?></td>
+<td><?php echo $product_stock ?></td>
 
 </tr>
 

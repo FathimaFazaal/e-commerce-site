@@ -49,6 +49,10 @@ $delete_cart = "delete from cart where ip_add='$ip_add'";
 
 $run_delete = mysqli_query($con,$delete_cart);
 
+$update_stock = "UPDATE products SET stock = stock - $pro_qty WHERE product_id = $pro_id";
+
+$run_update_stock = mysqli_query($con,$update_stock);
+
 echo "<script>alert('Your order has been submitted,Thanks ')</script>";
 
 echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";

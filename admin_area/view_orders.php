@@ -1,211 +1,204 @@
 <?php
 
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
 
-echo "<script>window.open('login.php','_self')</script>";
-
-}
-
-else {
+    echo "<script>window.open('login.php','_self')</script>";
+} else {
 
 
 ?>
 
-<div class="row"><!-- 1 row Starts -->
+    <div class="row"><!-- 1 row Starts -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-<ol class="breadcrumb"><!-- breadcrumb Starts  --->
+            <ol class="breadcrumb"><!-- breadcrumb Starts  --->
 
-<li class="active">
+                <li class="active">
 
-<i class="fa fa-dashboard"></i> Dashboard / View Orders
+                    <i class="fa fa-dashboard"></i> Dashboard / View Orders
 
-</li>
+                </li>
 
-</ol><!-- breadcrumb Ends  --->
+            </ol><!-- breadcrumb Ends  --->
 
-</div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Ends -->
 
-</div><!-- 1 row Ends -->
+    </div><!-- 1 row Ends -->
 
 
-<div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- 2 row Starts -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Starts -->
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Starts -->
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- panel-heading Starts -->
 
-<h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Starts -->
 
-<i class="fa fa-money fa-fw"></i> View Orders
+                        <i class="fa fa-money fa-fw"></i> View Orders
 
-</h3><!-- panel-title Ends -->
+                    </h3><!-- panel-title Ends -->
 
-</div><!-- panel-heading Ends -->
+                </div><!-- panel-heading Ends -->
 
-<div class="panel-body"><!-- panel-body Starts -->
+                <div class="panel-body"><!-- panel-body Starts -->
 
-<div class="table-responsive"><!-- table-responsive Starts -->
+                    <div class="table-responsive"><!-- table-responsive Starts -->
 
-<table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
 
-<thead><!-- thead Starts -->
+                            <thead><!-- thead Starts -->
 
-<tr>
+                                <tr>
 
-<th>#</th>
-<th>Customer</th>
-<th>Invoice</th>
-<th>Product</th>
-<th>Qty</th>
-<th>Size</th>
-<th>Order Date</th>
-<th>Total Amount</th>
-<th>Status</th>
-<th>Action</th>
+                                    <th>#</th>
+                                    <th>Customer</th>
+                                    <th>Invoice</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Order Date & Time</th>
+                                    <th>Total Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
 
 
-</tr>
+                                </tr>
 
-</thead><!-- thead Ends -->
+                            </thead><!-- thead Ends -->
 
 
-<tbody><!-- tbody Starts -->
+                            <tbody><!-- tbody Starts -->
 
-<?php
+                                <?php
 
-$i = 0;
+                                $i = 0;
 
-$get_orders = "select * from pending_orders";
+                                $get_orders = "select * from pending_orders";
 
-$run_orders = mysqli_query($con,$get_orders);
+                                $run_orders = mysqli_query($con, $get_orders);
 
-while ($row_orders = mysqli_fetch_array($run_orders)) {
+                                while ($row_orders = mysqli_fetch_array($run_orders)) {
 
-$order_id = $row_orders['order_id'];
+                                    $order_id = $row_orders['order_id'];
 
-$c_id = $row_orders['customer_id'];
+                                    $c_id = $row_orders['customer_id'];
 
-$invoice_no = $row_orders['invoice_no'];
+                                    $invoice_no = $row_orders['invoice_no'];
 
-$product_id = $row_orders['product_id'];
+                                    $product_id = $row_orders['product_id'];
 
-$qty = $row_orders['qty'];
+                                    $qty = $row_orders['qty'];
 
-$size = $row_orders['size'];
+                                    $size = $row_orders['size'];
 
-$order_status = $row_orders['order_status'];
+                                    $order_status = $row_orders['order_status'];
 
-$get_products = "select * from products where product_id='$product_id'";
+                                    $get_products = "select * from products where product_id='$product_id'";
 
-$run_products = mysqli_query($con,$get_products);
+                                    $run_products = mysqli_query($con, $get_products);
 
-$row_products = mysqli_fetch_array($run_products);
+                                    $row_products = mysqli_fetch_array($run_products);
 
-$product_title = $row_products['product_title'];
+                                    $product_title = $row_products['product_title'];
 
-$i++;
+                                    $i++;
 
-?>
+                                ?>
 
-<tr>
+                                    <tr>
 
-<td><?php echo $i; ?></td>
+                                        <td><?php echo $i; ?></td>
 
-<td>
-<?php 
+                                        <td>
+                                            <?php
 
-$get_customer = "select * from customers where customer_id='$c_id'";
+                                            $get_customer = "select * from customers where customer_id='$c_id'";
 
-$run_customer = mysqli_query($con,$get_customer);
+                                            $run_customer = mysqli_query($con, $get_customer);
 
-$row_customer = mysqli_fetch_array($run_customer);
+                                            $row_customer = mysqli_fetch_array($run_customer);
 
-$customer_email = $row_customer['customer_email'];
+                                            $customer_email = $row_customer['customer_email'];
 
-echo $customer_email;
+                                            echo $customer_email;
 
- ?>
- </td>
+                                            ?>
+                                        </td>
 
-<td bgcolor="orange" ><?php echo $invoice_no; ?></td>
+                                        <td bgcolor="orange"><?php echo $invoice_no; ?></td>
 
-<td><?php echo $product_title; ?></td>
+                                        <td><?php echo $product_title; ?></td>
 
-<td><?php echo $qty; ?></td>
+                                        <td><?php echo $qty; ?></td>
 
-<td><?php echo $size; ?></td>
 
-<td>
-<?php
 
-$get_customer_order = "select * from customer_orders where order_id='$order_id'";
+                                        <td>
+                                            <?php
 
-$run_customer_order = mysqli_query($con,$get_customer_order);
+                                            $get_customer_order = "select * from customer_orders where order_id='$order_id'";
 
-$row_customer_order = mysqli_fetch_array($run_customer_order);
+                                            $run_customer_order = mysqli_query($con, $get_customer_order);
 
-$order_date = $row_customer_order['order_date'];
+                                            $row_customer_order = mysqli_fetch_array($run_customer_order);
 
-$due_amount = $row_customer_order['due_amount'];
+                                            $order_date = $row_customer_order['order_date'];
 
-echo $order_date;
+                                            $due_amount = $row_customer_order['due_amount'];
 
-?>
-</td>
+                                            echo $order_date;
 
-<td>$<?php echo $due_amount; ?></td>
+                                            ?>
+                                        </td>
 
-<td>
-<?php
+                                        <td>Rs <?php echo $due_amount; ?></td>
 
-if($order_status=='pending'){
+                                        <td>
+                                            <?php
 
-echo $order_status='<div style="color:red;">Pending</div>';
+                                            if ($order_status == 'pending') {
 
-}
-else{
+                                                echo $order_status = '<div style="color:red;">Pending</div>';
+                                            } else {
 
-echo $order_status='Completed';
+                                                echo $order_status = 'Completed';
+                                            }
 
-}
 
+                                            ?>
+                                        </td>
 
-?>
-</td>
+                                        <td>
 
-<td>
+                                            <a href="index.php?order_delete=<?php echo $order_id; ?>">
 
-<a href="index.php?order_delete=<?php echo $order_id; ?>" >
+                                                <i class="fa fa-trash-o"></i> Delete
 
-<i class="fa fa-trash-o" ></i> Delete
+                                            </a>
 
-</a>
+                                        </td>
 
-</td>
 
+                                    </tr>
 
-</tr>
+                                <?php } ?>
 
-<?php } ?>
+                            </tbody><!-- tbody Ends -->
 
-</tbody><!-- tbody Ends -->
+                        </table><!-- table table-bordered table-hover table-striped Ends -->
 
-</table><!-- table table-bordered table-hover table-striped Ends -->
+                    </div><!-- table-responsive Ends -->
 
-</div><!-- table-responsive Ends -->
+                </div><!-- panel-body Ends -->
 
-</div><!-- panel-body Ends -->
+            </div><!-- panel panel-default Ends -->
 
-</div><!-- panel panel-default Ends -->
+        </div><!-- col-lg-12 Ends -->
 
-</div><!-- col-lg-12 Ends -->
-
-</div><!-- 2 row Ends -->
+    </div><!-- 2 row Ends -->
 
 
 <?php } ?>

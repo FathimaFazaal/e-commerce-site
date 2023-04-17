@@ -61,7 +61,7 @@ include("includes/main.php");
 
             <label>Email Address</label>
 
-            <input type="text" class="form-control" name="c_email" required>
+            <input type="email" class="form-control" name="c_email" required>
 
           </div><!-- form-group Ends -->
 
@@ -126,7 +126,7 @@ include("includes/main.php");
 
             <label>Contact Number </label>
 
-            <input type="text" class="form-control" name="c_contact" required>
+            <input type="text" class="form-control" name="c_contact" maxlength="10" required>
 
           </div><!-- form-group Ends -->
 

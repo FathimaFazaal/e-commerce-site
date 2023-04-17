@@ -42,7 +42,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li>
 
-                    <i class="fa fa-dashboard"></i> Dashboard / Edit Product Category
+                    <i class="fa fa-dashboard"></i> Dashboard / Edit Category
 
                 </li>
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title"><!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"></i> Edit Product Category
+                        <i class="fa fa-money fa-fw"></i> Edit Category
 
                     </h3><!-- panel-title Ends -->
 
@@ -76,7 +76,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label">Product Category Title</label>
+                            <label class="col-md-3 control-label">Category Title</label>
 
                             <div class="col-md-6">
 
@@ -88,7 +88,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label">Show as Top Product Category</label>
+                            <label class="col-md-3 control-label">Show as Top Category</label>
 
                             <div class="col-md-6">
 
@@ -133,7 +133,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6">
 
-                                <input type="submit" name="update" value="Update Now" class="btn btn-primary form-control">
+                                <input type="submit" name="update" value="Update Category" class="btn btn-primary form-control">
 
                             </div>
 

@@ -71,7 +71,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <div class="col-md-6">
 
-                  <input type="text" name="product_title" class="form-control" required>
+                  <input type="text" name="product_title" class="form-control" maxlength="20" required>
 
                 </div>
 
@@ -90,7 +90,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                   <p style="font-size:15px; font-weight:bold;">
 
-                    Bundle Url Example : navy-blue-t-shirt
+                    Bundle Url Example : steel-whisk
 
                   </p>
 
@@ -101,13 +101,13 @@ if (!isset($_SESSION['admin_email'])) {
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Select A Manufacturer </label>
+                <label class="col-md-3 control-label"> Select a Brand </label>
 
                 <div class="col-md-6">
 
                   <select class="form-control" name="manufacturer"><!-- select manufacturer Starts -->
 
-                    <option> Select A Manufacturer </option>
+                    <option> Select a Brand </option>
 
                     <?php
 
@@ -133,13 +133,13 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Product Category </label>
+                <label class="col-md-3 control-label">Category </label>
 
                 <div class="col-md-6">
 
                   <select name="product_cat" class="form-control">
 
-                    <option> Select a Product Category </option>
+                    <option> Select a Category </option>
 
 
                     <?php
@@ -169,14 +169,14 @@ $manufacturer_title
 
               <div class="form-group"><!-- form-group Starts -->
 
-                <label class="col-md-3 control-label"> Category </label>
+                <label class="col-md-3 control-label">Sub Category </label>
 
                 <div class="col-md-6">
 
 
                   <select name="cat" class="form-control">
 
-                    <option> Select a Category </option>
+                    <option> Select a Sub Category </option>
 
                     <?php
 

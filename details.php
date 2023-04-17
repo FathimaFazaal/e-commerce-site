@@ -173,7 +173,7 @@ if ($check_product == 0) {
 
             <div class="box"><!-- box Starts -->
 
-              <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
+              <h1 class="text-center"> <?php echo "<span style='text-transform:uppercase;'> $pro_title </span>"; ?> </h1>
 
               <?php
 
@@ -212,6 +212,8 @@ if ($check_product == 0) {
 
                   $pro_label = $row_price['product_label'];
 
+                  $pro_stock = $row_price['stock'];
+
                   if ($pro_label == "Sale" or $pro_label == "Gift") {
 
                     $product_price = $pro_psp_price;
@@ -235,6 +237,17 @@ if ($check_product == 0) {
 
                 <?php
 
+                $get_pro = "select * from products where product_id=$pro_id";
+
+                                $run_pro = mysqli_query($con, $get_pro);
+
+                                while ($row_pro = mysqli_fetch_array($run_pro)) {
+
+                                    $pro_stock = $row_pro['stock'];
+
+                                    break;
+                                }
+
                 if ($status == "product") {
 
                 ?>
@@ -245,15 +258,27 @@ if ($check_product == 0) {
 
                     <div class="col-md-7"><!-- col-md-7 Starts -->
 
+                      
+
+
                       <select name="product_qty" class="form-control">
 
                         <option>Select quantity</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <?php 
+                            $possible_qty=0;
+                            if ($pro_stock>=5){
+                              $possible_qty=5;
+                            }else{
+                                if($pro_stock>0)
+                                  $possible_qty=$pro_stock;
+                            }
 
+                            $i=1;
+                            while ($i<=$possible_qty){
+                                echo "<option>$i</option>";
+                                $i++;
+                            }
+                        ?>
 
                       </select>
 
@@ -263,6 +288,31 @@ if ($check_product == 0) {
 
                   <div class="form-group"><!-- form-group Starts -->
 
+                    <label class="col-md-5 control-label"> </label>
+
+                    <div class="col-md-7"><!-- col-md-7 Starts -->
+
+                      <label class="col-md-9">
+                          <?php 
+                                 if ($pro_stock==0)
+                                    echo "<span style='color: red; font-size: 20px '>Out of Stock</span>";
+                                 else{
+                                      if ($pro_stock>5){
+                                        echo "More than 5 pieces Available";
+                                      }else{
+                                          echo "Only $pro_stock piece(s) Available, <span style='color: red'>Hurry Up!</span>";
+                                      }
+                                  }
+                          ?>
+                      </label>
+
+                    </div><!-- col-md-7 Ends -->
+
+                  </div><!-- form-group Ends -->
+
+                  <!-- <div class="form-group"> -->
+                    <!-- form-group Starts -->
+                    
                     <!-- <label class="col-md-5 control-label">Product Size</label> -->
 
                     <!-- <div class="col-md-7"> <!-- col-md-7 Starts -->
@@ -280,7 +330,8 @@ if ($check_product == 0) {
                     </div>  <!-- col-md-7 Ends -->
 
 
-                  </div><!-- form-group Ends -->
+                  <!-- </div> -->
+                  <!-- form-group Ends -->
 
                 <?php } else { ?>
 
@@ -294,14 +345,48 @@ if ($check_product == 0) {
                       <select name="product_qty" class="form-control">
 
                         <option>Select quantity</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <?php 
+                            $possible_qty=0;
+                            if ($pro_stock>=5){
+                              $possible_qty=5;
+                            }else{
+                                if($pro_stock>0)
+                                  $possible_qty=$pro_stock;
+                            }
+
+                            $i=1;
+                            while ($i<=$possible_qty){
+                                echo "<option>$i</option>";
+                                $i++;
+                            }
+                        ?>
 
 
                       </select>
+
+                    </div><!-- col-md-7 Ends -->
+
+                  </div><!-- form-group Ends -->
+
+                  <div class="form-group"><!-- form-group Starts -->
+
+                    <label class="col-md-5 control-label"> </label>
+
+                    <div class="col-md-7"><!-- col-md-7 Starts -->
+
+                      <label class="col-md-9">
+                          <?php 
+                                 if ($pro_stock==0)
+                                    echo "<span style='color: red; font-size: 20px '>Out of Stock</span>";
+                                 else{
+                                      if ($pro_stock>5){
+                                        echo "More than 5 pieces Available";
+                                      }else{
+                                          echo "Only $pro_stock piece(s) Available, <span style='color: red'>Hurry Up!</span>";
+                                      }
+                                  }
+                          ?>
+                      </label>
 
                     </div><!-- col-md-7 Ends -->
 
@@ -326,7 +411,7 @@ if ($check_product == 0) {
                   <!-- </div> -->
 
 
-                  <!-- </div> --> -->
+                  <!-- </div> -->
 
 
                 <?php } ?>
@@ -343,26 +428,26 @@ if ($check_product == 0) {
 
                     echo "
 
-<p class='price'>
+                    <p class='price'>
 
-Product Price : <del> Rs $pro_price </del><br>
+                    Product Price : <del> Rs $pro_price </del><br>
 
-Product sale Price : Rs $pro_psp_price
+                    Product sale Price : Rs $pro_psp_price
 
-</p>
+                    </p>
 
-";
+                    ";
                   } else {
 
                     echo "
 
-<p class='price'>
+                        <p class='price'>
 
-Product Price : Rs $pro_price
+                        Product Price : Rs $pro_price
 
-</p>
+                        </p>
 
-";
+                        ";
                   }
                 } else {
 
@@ -396,13 +481,20 @@ Bundle Price : Rs. $pro_price/-
 
                 ?>
 
+
+
                 <p class="text-center buttons"><!-- text-center buttons Starts -->
 
-                  <button class="btn btn-danger" type="submit" name="add_cart">
+                  <?php 
+                      if ($pro_stock>0){
+                        echo "<button class='btn btn-danger' type='submit' name='add_cart'>
 
-                    <i class="fa fa-shopping-cart"></i> Add to Cart
+                    <i class='fa fa-shopping-cart'></i> Add to Cart
 
-                  </button>
+                  </button>";
+                      }
+                  ?>
+                  
 
                   <button class="btn btn-warning" type="submit" name="add_wishlist">
 
