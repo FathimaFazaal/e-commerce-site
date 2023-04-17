@@ -1,6 +1,6 @@
 <?php
 
-require "C:/xampp/htdocs/e-commerce-site/admin_area/vendor/autoload.php";
+require "F:/xampp/htdocs/e-commerce-site/admin_area/vendor/autoload.php";
 include("../includes/db.php");
 
 use Dompdf\Dompdf;
@@ -27,7 +27,7 @@ tr:nth-child(even) {
 </style>
 </head>";
 
-$html .= '<img src="C:/xampp/htdocs/e-commerce-site/admin_area/admin_images/logo.jpg" style="width: 10%"/><span style="margin-top: -50px">Everest Marketing PVT LTD</span>';
+$html .= '<img src="F:/xampp/htdocs/e-commerce-site/admin_area/admin_images/logo.jpg" style="width: 10%"/><span style="margin-top: -50px">Everest Marketing PVT LTD</span>';
 
 $html .= "<h3 style='text-align:center; background-color:#f2f2f2'>Best Customers Report</h3>";
 
@@ -40,31 +40,30 @@ $html .= "<table style='width:100%'>
 
 $get_customers = "SELECT customers.customer_name as name,customers.customer_email as email, COUNT(customer_orders.customer_id) as orders FROM customer_orders,customers WHERE customer_orders.customer_id = customers.customer_id GROUP BY customer_orders.customer_id ORDER BY orders DESC";
 
-$run_customers = mysqli_query($con,$get_customers);
+$run_customers = mysqli_query($con, $get_customers);
 
-while($row_customers = mysqli_fetch_array($run_customers)){
+while ($row_customers = mysqli_fetch_array($run_customers)) {
 
-$name = $row_customers['name'];
+  $name = $row_customers['name'];
 
-$email = $row_customers['email'];
+  $email = $row_customers['email'];
 
-$orders = $row_customers['orders'];
+  $orders = $row_customers['orders'];
 
-$html .= "<tr>
+  $html .= "<tr>
 
 <td>$name</td>
 <td>$email</td>
 <td>$orders</td>
 
 </tr>";
-
 }
 
 $html .= "</table>";
 
 $options = new Options;
 // $options->setChroot(__DIR__);
-$options->setChroot("C:/xampp/htdocs/e-commerce-site/admin_area");
+$options->setChroot("F:/xampp/htdocs/e-commerce-site/admin_area");
 
 $dompdf = new Dompdf($options);
 
@@ -72,6 +71,4 @@ $dompdf->loadHtml($html);
 
 $dompdf->render();
 
-$dompdf->stream("bestCustomers.pdf",["Attachment"=>0]);
-
-?>
+$dompdf->stream("bestCustomers.pdf", ["Attachment" => 0]);

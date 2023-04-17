@@ -59,7 +59,7 @@ if (isset($_REQUEST['cat']) && is_array($_REQUEST['cat'])) {
 
         <h3 class="panel-title"><!-- panel-title Starts -->
 
-            Manufacturers
+            Brands
 
             <div class="pull-right"><!-- pull-right Starts -->
 
@@ -85,7 +85,7 @@ if (isset($_REQUEST['cat']) && is_array($_REQUEST['cat'])) {
 
             <div class="input-group"><!-- input-group Starts -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-manufacturer" placeholder="Filter Manufacturers">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-manufacturer" placeholder="Filter Brands">
 
 
                 <a class="input-group-addon"> <i class="fa fa-search"></i> </a>
@@ -249,7 +249,7 @@ $manufacturer_title
 
             <div class="input-group"><!-- input-group Starts -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-p-cats" placeholder="Filter Product Categories">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-p-cats" placeholder="Filter Categories">
 
                 <a class="input-group-addon"> <i class="fa fa-search"></i> </a>
 
@@ -408,7 +408,7 @@ $p_cat_title
 
             <div class="input-group"><!-- input-group Starts -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-cats" placeholder="Filter Categories">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-cats" placeholder="Filter Sub Categories">
 
                 <a class="input-group-addon"> <i class="fa fa-search"> </i> </a>
 

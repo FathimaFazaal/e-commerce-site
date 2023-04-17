@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / Insert Manufacturer
+                    <i class="fa fa-dashboard"></i> Dashboard / Insert Brands
 
                 </li>
 
@@ -39,8 +39,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <h3 class="panel-title"><!-- panel-title Starts -->
 
-                        <i class="fa fa-money fa-fw"> </i> Insert Manufacturer
-
+                        <i class="fa fa-money fa-fw"> </i> Insert Brands
                     </h3><!-- panel-title Ends -->
 
                 </div><!-- panel-heading Ends -->
@@ -51,11 +50,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label"> Manufacturer </label>
+                            <label class="col-md-3 control-label"> Brand Title</label>
 
                             <div class="col-md-6">
 
-                                <input type="text" name="manufacturer_name" class="form-control">
+                                <input type="text" name="manufacturer_name" class="form-control" maxlength="20">
 
                             </div>
 
@@ -63,7 +62,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                         <div class="form-group"><!-- form-group Starts -->
 
-                            <label class="col-md-3 control-label"> Show as Top Manufacturer </label>
+                            <label class="col-md-3 control-label"> Show as Top Brand</label>
 
                             <div class="col-md-6">
 
@@ -97,7 +96,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6">
 
-                                <input type="submit" name="submit" class="form-control btn btn-primary" value=" Insert Manufacturer ">
+                                <input type="submit" name="submit" class="form-control btn btn-primary" value=" Insert Brand">
 
                             </div>
 

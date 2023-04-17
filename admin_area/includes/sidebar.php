@@ -221,7 +221,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <a href="#" data-toggle="collapse" data-target="#manufacturers"><!-- anchor Starts -->
 
-                        <i class="fa fa-fw fa-briefcase"></i> Manufacturers
+                        <i class="fa fa-fw fa-briefcase"></i> Brands
 
                         <i class="fa fa-fw fa-caret-down"></i>
 
@@ -231,11 +231,11 @@ if (!isset($_SESSION['admin_email'])) {
                     <ul id="manufacturers" class="collapse"><!-- ul collapse Starts -->
 
                         <li>
-                            <a href="index.php?insert_manufacturer"> Insert Manufacturer </a>
+                            <a href="index.php?insert_manufacturer"> Insert Brand </a>
                         </li>
 
                         <li>
-                            <a href="index.php?view_manufacturers"> View Manufacturers </a>
+                            <a href="index.php?view_manufacturers"> View Brands </a>
                         </li>
 
                     </ul><!-- ul collapse Ends -->
@@ -248,7 +248,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <a href="#" data-toggle="collapse" data-target="#p_cat">
 
-                        <i class="fa fa-fw fa-pencil"></i> Products Categories
+                        <i class="fa fa-fw fa-pencil"></i> Categories
 
                         <i class="fa fa-fw fa-caret-down"></i>
 
@@ -258,11 +258,11 @@ if (!isset($_SESSION['admin_email'])) {
                     <ul id="p_cat" class="collapse">
 
                         <li>
-                            <a href="index.php?insert_p_cat"> Insert Product Category </a>
+                            <a href="index.php?insert_p_cat"> Insert Category </a>
                         </li>
 
                         <li>
-                            <a href="index.php?view_p_cats"> View Products Categories </a>
+                            <a href="index.php?view_p_cats"> View Categories </a>
                         </li>
 
 
@@ -275,7 +275,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <a href="#" data-toggle="collapse" data-target="#cat">
 
-                        <i class="fa fa-fw fa-arrows-v"></i> Categories
+                        <i class="fa fa-fw fa-arrows-v"></i> Sub Categories
 
                         <i class="fa fa-fw fa-caret-down"></i>
 
@@ -284,11 +284,11 @@ if (!isset($_SESSION['admin_email'])) {
                     <ul id="cat" class="collapse">
 
                         <li>
-                            <a href="index.php?insert_cat"> Insert Category </a>
+                            <a href="index.php?insert_cat"> Insert Sub Category </a>
                         </li>
 
                         <li>
-                            <a href="index.php?view_cats"> View Categories </a>
+                            <a href="index.php?view_cats"> View Sub Categories </a>
                         </li>
 
 
@@ -298,18 +298,18 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 
-                <li><!-- store section li Starts -->
+                <!-- <li> store section li Starts -->
 
-                    <a href="#" data-toggle="collapse" data-target="#store">
+                <!-- <a href="#" data-toggle="collapse" data-target="#store">
 
-                        <i class="fa fa-fw fa-briefcase"></i> Stores
+                        <i class="fa fa-fw fa-briefcase"></i> Stores -->
 
-                        <i class="fa fa-fw fa-caret-down"></i>
+                <!-- <i class="fa fa-fw fa-caret-down"></i>
 
                     </a>
 
-                    <ul id="store" class="collapse">
-
+                    <ul id="store" class="collapse"> -->
+                <!-- 
                         <li>
                             <a href="index.php?insert_store"> Insert store </a>
                         </li>
@@ -318,54 +318,14 @@ if (!isset($_SESSION['admin_email'])) {
                             <a href="index.php?view_store"> View store </a>
                         </li>
 
-                    </ul>
+                    </ul> -->
 
-                </li><!-- store section li Ends -->
+                <!-- </li>store section li Ends -->
 
 
-                <li><!-- contact us li Starts -->
 
-                    <a href="#" data-toggle="collapse" data-target="#contact_us"><!-- anchor Starts -->
 
-                        <i class="fa fa-fw fa-pencil"> </i> Contact Us
 
-                        <i class="fa fa-fw fa-caret-down"></i>
-
-                    </a><!-- anchor Ends -->
-
-                    <ul id="contact_us" class="collapse">
-
-                        <li>
-
-                            <a href="index.php?edit_contact_us"> Edit Contact Us </a>
-
-                        </li>
-
-                        <li>
-
-                            <a href="index.php?insert_enquiry"> Insert Enquiry Type </a>
-
-                        </li>
-
-                        <li>
-
-                            <a href="index.php?view_enquiry"> View Enquiry Types </a>
-
-                        </li>
-
-                    </ul>
-
-                </li><!-- contact us li Ends -->
-
-                <li><!-- about us li Starts -->
-
-                    <a href="index.php?edit_about_us">
-
-                        <i class="fa fa-fw fa-edit"></i>About Us
-
-                    </a>
-
-                </li><!-- about us li Ends -->
 
 
                 <li><!-- Coupons Section li Starts -->
@@ -394,30 +354,7 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 
-                <li><!-- terms li Starts -->
 
-                    <a href="#" data-toggle="collapse" data-target="#terms"><!-- anchor Starts -->
-
-                        <i class="fa fa-fw fa-table"></i> Terms
-
-                        <i class="fa fa-fw fa-caret-down"></i>
-
-                    </a><!-- anchor Ends -->
-
-                    <ul id="terms" class="collapse"><!-- ul collapse Starts -->
-
-                        <li>
-                            <a href="index.php?insert_term"> Insert Terms </a>
-                        </li>
-
-                        <li>
-                            <a href="index.php?view_terms"> View Terms </a>
-                        </li>
-
-                    </ul><!-- ul collapse Ends -->
-
-
-                </li><!-- terms li Ends -->
 
 
 
@@ -463,8 +400,8 @@ if (!isset($_SESSION['admin_email'])) {
                     </a>
 
                 </li> -->
-                
-                
+
+
                 <li><!-- li Starts -->
 
                     <a href="#" data-toggle="collapse" data-target="#reports">
@@ -478,26 +415,67 @@ if (!isset($_SESSION['admin_email'])) {
                     <ul id="reports" class="collapse">
 
                         <li>
-                            <a href="index.php?sales_report"> Sales Order </a>
+                            <a href="index.php?sales_report"> Sales Order Report</a>
                         </li>
-                        
+
                         <li>
-                            <a href="index.php?products_report"> Products </a>
+                            <a href="index.php?products_report"> Products Report</a>
                         </li>
-                        
+
                         <li>
-                            <a href="index.php?best_customers"> Best Customers </a>
+                            <a href="index.php?best_customers"> Best Customers Report</a>
                         </li>
-                        
-                        <li>
-                            <a href="index.php?view_users"> Sales with filter </a>
-                        </li>
+
+
                     </ul>
 
                 </li><!-- li Ends -->
-                
-                
+
+
                 <!-- Report li Ends -->
+                <li><!-- about us li Starts -->
+
+                    <a href="index.php?edit_about_us">
+
+                        <i class="fa fa-fw fa-edit"></i>About Us
+
+                    </a>
+
+                </li><!-- about us li Ends -->
+
+                <li><!-- contact us li Starts -->
+
+                    <a href="#" data-toggle="collapse" data-target="#contact_us"><!-- anchor Starts -->
+
+                        <i class="fa fa-fw fa-pencil"> </i> Contact Us
+
+                        <i class="fa fa-fw fa-caret-down"></i>
+
+                    </a><!-- anchor Ends -->
+
+                    <ul id="contact_us" class="collapse">
+
+                        <li>
+
+                            <a href="index.php?edit_contact_us"> Edit Contact Us </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="index.php?insert_enquiry"> Insert Enquiry Type </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="index.php?view_enquiry"> View Enquiry Types </a>
+
+                        </li>
+
+                    </ul>
+                </li><!-- contact us li Ends -->
+
 
                 <li><!-- li Starts -->
 

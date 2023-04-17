@@ -71,7 +71,7 @@ include("includes/main.php");
 
         <label>Email Address</label>
 
-        <input type="text" class="form-control" name="email" required>
+        <input type="email" class="form-control" name="email" required>
 
       </div><!-- form-group Ends -->
 
@@ -79,7 +79,7 @@ include("includes/main.php");
 
         <label> Subject </label>
 
-        <input type="text" class="form-control" name="subject" required>
+        <input type="text" class="form-control" name="subject" maxlength="35" required>
 
       </div><!-- form-group Ends -->
 

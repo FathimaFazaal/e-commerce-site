@@ -76,122 +76,71 @@ function total_price()
 
 // getPro function Starts //
 
+// getPro function Starts //
 function getPro()
 {
-
   global $db;
 
-  $get_products = "select * from products order by 1 DESC LIMIT 0,8";
+  $get_products = "select * from products order by 1 DESC LIMIT 0,6";
 
   $run_products = mysqli_query($db, $get_products);
 
   while ($row_products = mysqli_fetch_array($run_products)) {
-
     $pro_id = $row_products['product_id'];
-
     $pro_title = $row_products['product_title'];
-
     $pro_price = $row_products['product_price'];
-
     $pro_img1 = $row_products['product_img1'];
-
     $pro_label = $row_products['product_label'];
-
     $manufacturer_id = $row_products['manufacturer_id'];
-
     $get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
-
     $run_manufacturer = mysqli_query($db, $get_manufacturer);
-
     $row_manufacturer = mysqli_fetch_array($run_manufacturer);
-
     $manufacturer_name = $row_manufacturer['manufacturer_title'];
-
     $pro_psp_price = $row_products['product_psp_price'];
-
     $pro_url = $row_products['product_url'];
 
     if ($pro_label == "Sale" or $pro_label == "Gift") {
-
       $product_price = "<del> Rs $pro_price </del>";
-
       $product_psp_price = "| Rs $pro_psp_price";
     } else {
-
       $product_psp_price = "";
-
       $product_price = "Rs $pro_price";
     }
 
-
     if ($pro_label == "") {
     } else {
-
-      $product_label = "
-
-<a class='label sale' href='#' style='color:black;'>
-
-<div class='thelabel'>$pro_label</div>
-
-<div class='label-background'> </div>
-
-</a>
-
-";
+      $product_label = "<a class='label sale' href='#' style='color:black;'>
+                                  <div class='thelabel'>$pro_label</div>
+                                  <div class='label-background'> </div>
+                                </a>";
     }
 
-
-    echo "
-
-<div class='col-md-4 col-sm-6 single' >
-
-<div class='product' >
-
-<a href='$pro_url' >
-
-<img src='admin_area/product_images/$pro_img1' class='img-responsive' >
-
-</a>
-
-<div class='text' >
-
-<center>
-
-<p class='btn btn-warning'> $manufacturer_name </p>
-
-</center>
-
-<hr>
-
-<h3><a href='$pro_url' >$pro_title</a></h3>
-
-<p class='price' > $product_price $product_psp_price </p>
-
-<p class='buttons' >
-
-<a href='$pro_url' class='btn btn-default' >View Details</a>
-
-<a href='$pro_url' class='btn btn-danger'>
-
-<i class='fa fa-shopping-cart'></i> Add To Cart
-
-</a>
-
-
-</p>
-
-</div>
-
-$product_label
-
-
-</div>
-
-</div>
-
-";
+    echo "<div class='col-md-4 col-sm-6 single' style='margin-bottom: 30px;'>
+                <div class='product' style='border: 1px solid #ccc;'>
+                  <a href='$pro_url'>
+                    <img src='admin_area/product_images/$pro_img1' class='img-responsive' style='height: 250px; width: 250px;'>
+                  </a>
+                  <div class='text' style='padding: 10px;'>
+                    <center>
+                      <p class='btn btn-warning' style='margin-bottom: 5px;'> $manufacturer_name </p>
+                    </center>
+                    <hr style='margin-top: 0;'>
+                    <h3 style='margin-top: 0;'><a href='$pro_url' style='color:black;'>$pro_title</a></h3>
+                    <p class='price' style='margin-top: 0;'> $product_price $product_psp_price </p>
+                    <p class='buttons' style='margin-bottom: 5px;'>
+                      <a href='$pro_url' class='btn btn-default' style='margin-right: 5px;'>View Details</a>
+                      <a href='$pro_url' class='btn btn-danger'>
+                        <i class='fa fa-shopping-cart'></i> Add To Cart
+                      </a>
+                    </p>
+                  </div>
+                  $product_label
+                </div>
+              </div>";
   }
 }
+// getPro function Ends //
+
 
 // getPro function Ends //
 
@@ -337,7 +286,7 @@ function getProducts()
 
 <a href='$pro_url' >
 
-<img src='admin_area/product_images/$pro_img1' class='img-responsive' >
+<img src='admin_area/product_images/$pro_img1' class='img-responsive' style='height: 250px; width: 250px;' >
 
 </a>
 
