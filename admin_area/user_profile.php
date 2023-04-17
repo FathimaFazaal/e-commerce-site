@@ -108,7 +108,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6"><!-- col-md-6 Starts -->
 
-                                <input type="text" name="admin_email" class="form-control" required value="<?php echo $admin_email; ?>">
+                                <input type="email" name="admin_email" class="form-control" required value="<?php echo $admin_email; ?>">
 
                             </div><!-- col-md-6 Ends -->
 
@@ -159,7 +159,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-6"><!-- col-md-6 Starts -->
 
-                                <input type="text" name="admin_contact" class="form-control" required value="<?php echo $admin_contact; ?>">
+                                <input type="text" name="admin_contact" class="form-control" maxlength="10" required value="<?php echo $admin_contact; ?>">
 
                             </div><!-- col-md-6 Ends -->
 
